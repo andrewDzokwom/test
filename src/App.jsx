@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar"
 import WicardManagement from "./components/WicardManagement"
 import WicardIndividual from "./components/WicardIndividual"
 import ProfilePage from "./components/ProfilePage"
+import WicardTable from './components/WicardTable';
 
 function App() {
   const divstyle = {
@@ -27,6 +28,9 @@ function App() {
                   <li>
                       <Link to="/contact">Contact</Link>
                   </li>
+                  <li >
+                      <Link to="/table">Table</Link>
+                  </li>
                 </ul>
                 </nav>
 
@@ -47,6 +51,11 @@ function App() {
                       <div style={divstyle}>
                       <Sidebar />
                       <ProfilePage />
+                    </div>} />
+                    <Route path="/table" element={
+                      <div style={divstyle}>
+                      <Sidebar />
+                      <WicardTable />
                     </div>} />
                 </Routes>
             </div>
